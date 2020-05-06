@@ -62,6 +62,9 @@ in pkgs.mkShell rec {
   buildInputs = [
     metals
     emacsd-config
+    pkgs.less
+    pkgs.which
+    pkgs.coreutils
     pkgs.jdk
     pkgs.silver-searcher
     pkgs.multimarkdown
@@ -69,10 +72,5 @@ in pkgs.mkShell rec {
     pkgs.git
   ];
 
-  shellHook = ''
-     alias emcs='emacs -q --load ${emacsd-config.src}/init.el'
-  '';
-
-  EMACS_USER_DIRECTORY=emacsd-config.src;
   EMACSD_CONFIG=emacsd-config.src;
 }
