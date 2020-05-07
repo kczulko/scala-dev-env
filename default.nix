@@ -52,11 +52,11 @@ let
       chmod -R +w $src
       ln -sf $src $out/src
     '';
-      
+
   };
 
 in pkgs.mkShell rec {
-  
+
   buildInputs = [
     metals
     emacs
