@@ -59,6 +59,7 @@ in pkgs.mkShell rec {
   
   buildInputs = [
     metals
+    emacs
     emacsd-config
     pkgs.less
     pkgs.which
@@ -66,7 +67,6 @@ in pkgs.mkShell rec {
     pkgs.jdk
     pkgs.silver-searcher
     pkgs.multimarkdown
-    pkgs.emacs26
     pkgs.git
   ];
 
