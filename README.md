@@ -1,6 +1,6 @@
 # What is it
 
-This project automates [github.com/kczulko/emacs-config](github.com/kczulko/emacs-config) installation and created scala development environment through nix-shell.
+This project automates [github.com/kczulko/emacs-config](github.com/kczulko/emacs-config) installation and creates scala development environment through nix-shell.
 
 # HOWTO
 
