@@ -1,5 +1,8 @@
-# HOWTO
+# What is it
 
+This project automates [github.com/kczulko/emacs-config](github.com/kczulko/emacs-config) installation and created scala development environment through nix-shell.
+
+# HOWTO
 
 1. Install nix
   ```bash
@@ -12,11 +15,19 @@
 
 3. Execute (for default metals version)
   ```bash
-  $ nix-shell --pure https://github.com/kczulko/scala-dev-env/tarball/master
+  $ nix-shell --pure --command "setup-emacs && emacs" https://github.com/kczulko/scala-dev-env/tarball/master
   ```
 
-... or with some other metals version
+There are several parameters to pass (all are set to defaults):
+
+1. _metalsVersion_ : version of metals to install
+1. _metalsSha256_  : metals sha256
+1. _emacsConfigSha256 : sha256 of [github.com/kczulko/emacs-config](github.com/kczulko/emacs-config)
+1. _globalProjectsDir : directory under which emacs-config repository will be clonned. Default to `/home/karol/projects`
+
+Based on that finall call may be changed to sth like that:
+
   ```bash
-  $ nix-shell --argstr metalsVersion "X.Y.Z" --pure https://github.com/kczulko/scala-dev-env/tarball/master
+  $ nix-shell --pure --argstr metalsVersion "1.0.0" --command "setup-emacs && emacs" https://github.com/kczulko/scala-dev-env/tarball/master  
   ```
 
