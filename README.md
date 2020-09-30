@@ -29,10 +29,12 @@ There are several parameters to pass (all are set to defaults):
 Based on that finall call may look more less like that:
 
   ```bash
-  $ nix-shell --pure \
+  $nix-shell --pure \
     --arg addEmacs true \
-    --argstr metalsVersion "1.0.0" \
-    --command "setup-emacs && emacs" \
+    --argstr metalsVersion "0.9.4" \
+    --argstr metalsSha256 "1k07gg13z3kambvvrxsc27781cd5npb2a50ahdbj7x6j6h67k0pg"
+    --argstr globalProjectsDir "/home/kczulko/Projects"
+    --command "setup-emacs && emacs"
     https://github.com/kczulko/scala-dev-env/tarball/master
   ```
 
