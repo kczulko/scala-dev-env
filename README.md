@@ -15,7 +15,10 @@ This project automates [github.com/kczulko/emacs-config](github.com/kczulko/emac
 
 3. Execute (for default metals version)
   ```bash
-  $ nix-shell --pure --arg addEmacs true --command "setup-emacs && emacs" https://github.com/kczulko/scala-dev-env/tarball/master
+  $ nix-shell --pure \
+    --arg addEmacs true \
+    --command "setup-emacs && emacs" \
+    https://github.com/kczulko/scala-dev-env/tarball/master
   ```
 
 There are several parameters to pass (all are set to defaults):
