@@ -34,8 +34,10 @@ stdenv.mkDerivation rec {
       mkdir -p ${EMACSD_CONFIG_PROJECT_ROOT}
       cp -r $src/. ${EMACSD_CONFIG_PROJECT_ROOT}
       cd ${EMACSD_CONFIG_PROJECT_ROOT}
+      touch .git/config
       git remote add origin git@github.com:kczulko/${githubProjectName}.git || :
       git restore --staged .
+      chmod -R +w .
 
       mkdir -p ${EMACSD}
 
